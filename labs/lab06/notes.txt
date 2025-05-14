@@ -1,0 +1,35 @@
+================================================================================================
+================================================================================================
+					Notes for lab 
+				_assume code is in python_ 
+================================================================================================
+================================================================================================
+
+
+## sample proportions 
+
+
+coin_proportions = make_array(0.5, 0.5) 
+ten_flips = sample_proportions(10, coin_proportions)
+
+simulated_proportion_heads = ten_flips.item(0) # heads 
+simulated_proportion_tails = ten_flips.item(1) # tails
+
+print("In our simulation, " + str(simulated_proportion_heads) + " of flips were heads and " \
+      + str(simulated_proportion_tails) + " of flips were tails.")
+
+
+[Reading for this lab](https://inferentialthinking.com/chapters/11/1/Assessing_a_Model.html)
+
+
+
+P value calculation: 
+proportion_greater_or_equal = np.count_nonzero(simulated_statistics >= observed_statistic) / num_repetitions
+
+
+Diya: 
+
+1. valid_stat is 2, looks like ai did something weird, but it still passed. Maybe I am wrong
+2. For question 1.8 
+	REMOVE THIS: "simulated_statistics = np.array(simulated_statistics)" 
+		it looks like it passed the test but I think thats wrong 
